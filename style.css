@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+
+:root{
+    --color-bacgraund1: #F5F5F7;
+    --color-bacgraund2: white;
+    --color-glass:#f5f5f781;
+
+    --color-text1: #6E6E73;
+    --color-text2: #1D1D1F;
+
+    --color1: #0D0D0D;
+    --color2: #404040;
+    --color3: #8C8C8C;
+    --color4: #BFBFBF;
+    --color5: #F2F2F2;
+
+    --color-button1: #0162A3;
+    --color-button2: #2E8F2E;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-text1);
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background-color: #F5F5F7;
+    font-family: sans-serif;
+}
+
+h1{
+    letter-spacing: 2px;
+}
+
+/*.particula{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, var(--color3) 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--color4) 0%, transparent 20%);
+}*/
+
+#Backgraund{
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    align-items: center; 
+    
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-glass);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    padding: 1rem;
+    
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.menulink {
+    text-decoration: none;
+    color: var(--color-text2);
+    font-weight: 200;
+    font-size: small;
+    position: relative;
+    padding: 0.2rem;
+    transition: 0.5s;
+}
+
+.menulink:hover{
+    font-weight: 400;
+    font-size: medium;
+    
+}
+
+.menulink::after{
+    content: '';
+    height: 1%;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--color1);
+    transition: 0.5s;
+}
+
+.menulink:hover::after{
+    width: 100%;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#perfil{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.273);
+    box-shadow: 0px 0px 20px ;
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+main > h1 {
+    margin-top: 30px;
+    color: var(--color-text1);
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+main > p{
+    margin-top: 5px;
+    color: var(--color-text1);
+}
+
+#sobre{
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sobre > h1{
+    text-align: center;
+    color: var(--color-text1);
+    margin: 40px;
+    font-weight: 300;
+}
+
+#sobre-paragrafo{
+    max-width: 900px;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: var(--color-bacgraund2);
+    
+}
+
+#sobre-paragrafo > p {
+    font-weight: 200;
+    line-height: 2em;
+    text-align: justify;
+    letter-spacing: 3pxm;
+    margin-bottom: 20px;
+   
+}
+
+#projetos {
+    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#projetos > h1{
+    position: absolute;
+    margin-bottom: 420px;
+    font-weight: 300;
+}
+
+.projetos-caixa {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.projeto-card{
+    background-color: var(--color-bacgraund2);
+    width: 400px;
+    border-radius: 8px;
+    margin: 40px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.projeto-card:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.345);
+    transform: translateY(-5px);
+    scale: 100%;
+    cursor: pointer;
+}
+
+.img-card{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-projetos {
+    padding: 1.5rem;
+}
+
+.titulo-info {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.titulo-paragrafo {
+    font-weight: 100;
+}
+
+
+
+#consultoria{
+    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#consultoria > h1{
+    position: absolute;
+    margin-bottom: 420px;
+    font-weight: 300;
+}
+
+
+.projetos-caixa_consultoria {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: auto;
+}
+
+.consult-card{
+    background-color: var(--color-bacgraund2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+
+#contato{
+    padding: 6rem 2rem;
+    margin: auto;
+}
+
+#contato > h1 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 300;
+}
+
+#caixa-form{
+    max-width: 600px;
+    background-color: var(--color-bacgraund2);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 0 auto;
+    
+}
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+}
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-bacgraund1);
+    outline: none;
+
+}
+
+.campo-form:focus{
+    border: 1px solid var(--color-button1);
+}
+
+.button-form{
+    width: 100%;
+    padding: 1rem 2rem;
+    color: var(--color-bacgraund1);
+    font-size: medium;
+    background-color: var(--color-button2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button-form:hover{
+    transform: translateY(-4px);
+    font-weight: 700;
+}
+
+footer{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--color-text1);
+}
+
+footer > h3{
+    letter-spacing: 3px;
+    font-size: medium ;
+}
+
+footer > p{
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+
+@keyframes flutuar{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}

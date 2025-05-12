@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/html e css/visual/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <title>COLLIM</title>
+</head>
+<body>
+
+    <div class="particula"></div>
+
+    <nav>
+        
+        <ul class="links" >
+            
+            <li><a href="#main" class="menulink" >Ínicio</a></li>
+            <li><a href="#sobre" class="menulink" >Sobre</a></li>
+            <li><a href="#projetos" class="menulink" >Projetos</a></li>
+            <li><a href="#consultoria" class="menulink" >Consultoria</a></li>
+            <li><a href="#contato" class="menulink" >Contato</a></li>
+        
+        </ul>
+        
+    </nav>
+
+    <main id="main" >
+
+        <img id="perfil" src="/htmlecss/Pessoal/landingPage/Perfil.png" alt="" sizes="1290px" srcset="">
+
+        <h1>GUILHERME COLLIM</h1>
+        <P>Negócios & Soluções</P>        
+
+    </main>
+
+    <section id="sobre" >
+
+        <h1>SOBRE MIM</h1>
+
+        <div id="sobre-paragrafo" >
+            <p>Sempre fui apaixonado por números e soluções, o que me levou a iniciar minha trajetória acadêmica na engenharia civil. No entanto, foi na barbearia que descobri minha verdadeira vocação. O que começou como uma curiosidade logo se transformou em paixão, e decidi trocar os cálculos estruturais pela arte de transformar visuais, iniciando uma jornada desafiadora como barbeiro e empreendedor.</p>
+            <p>Durante essa trajetória, enfrentei dificuldades para encontrar ferramentas de gestão que realmente atendessem às necessidades do meu negócio. Isso reacendeu meu interesse pela área de exatas e me motivou a estudar Análise e Desenvolvimento de Sistemas, com o objetivo de criar soluções práticas e eficientes baseadas na rotina de quem vive a bancada diariamente.</p>
+            <p>Com o tempo, minha atuação se expandiu: além de barbeiro, me tornei gestor e criador de novos negócios. Isso me proporcionou uma vivência prática em diversas áreas, como contabilidade, jurídico, gestão financeira e marketing para marcas emergentes.</p>
+            <p>Hoje, aplico todo esse conhecimento para desenvolver soluções que facilitem a vida de outros profissionais, sempre com o olhar de quem conhece cada detalhe da rotina na barbearia e os desafios de empreender nesse setor.</p>
+        </div>
+
+
+
+    </section>
+
+    <section  id="projetos" >
+          
+        
+        <h1>MEUS PROJETOS</h1>
+            <div class="projetos-caixa">
+                
+                <a href="https://mrmartin.com.br/" target="_blank" rel="external">
+                    <div class="projeto-card">
+                        <img src="/landingPage/img/MR..png" alt="MR. MARTIN`s" class="img-card">
+            
+                        <div class="info-projetos">
+                            <h3 class="titulo-info">Rede de Barbearias</h3>
+                            <p class="titulo-paragrafo">Atuando desde 2018 atuando na área de prestação de serviços.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/Pessoal/landingPage/SeuApp/seuapp.html" target="_blank" rel="external">
+                    <div class="projeto-card">
+                        <img src="/landingPage/img/Seu Applicativo.png" alt="Seu Applicativo" class="img-card">
+                        <div class="info-projetos">
+                            <h3 class="titulo-info">Sistema de Gestão</h3>
+                            <p class="titulo-paragrafo">Desenvolvido de Barbeiro para Barbeiros.</p>
+                        </div>
+                </a>
+
+                </div>
+            </div>
+        
+
+    </section>
+
+    <section id="consultoria">
+
+        <h1>CONSULTORIA</h1>
+        <div class="projetos-caixa_consultoria">
+            
+            <div class="consult-card">
+                <img src="/landingPage/img/organize.png" alt="Organização" class="img-card">
+        
+                <div class="info-projetos">
+                    <h3 class="titulo-info">Organização Empresarial</h3>
+                    <p class="titulo-paragrafo">Recursos Humanos, Jurídico, Contábil e Estrutura Social.</p>
+                </div>
+            </div>
+
+            <div class="consult-card">
+                <img src="/landingPage/img/tecnology.png" alt="Tecnologia" class="img-card">
+
+                <div class="info-projetos">
+                    <h3 class="titulo-info">Tecnologia</h3>
+                    <p class="titulo-paragrafo">Integração com as melhores práticas e ferramentas para CRM.</p>
+                </div>
+            </div>
+
+            <div class="consult-card">
+                <img src="/landingPage/img/production.png" alt="MR. MARTIN`s" class="img-card">
+        
+                <div class="info-projetos">
+                    <h3 class="titulo-info">Custos e Produtividade</h3>
+                    <p class="titulo-paragrafo">Controles e Análises Custos x Produtividade e Indicadores financeiros.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contato" >
+        <h1>ENTRE EM CONTATO</h1>
+
+        <form id="caixa-form" onsubmit="enviarwhats(event)" >
+            <div class="grupo-form" >
+                <input id="nome" class="campo-form" placeholder="Nome"  >
+            </div>
+            <div class="grupo-form" >
+                <textarea id="mensagem" class="campo-form" placeholder="Digite Sua Mensagem" rows="6" ></textarea>
+            </div>
+            <button type="submit" class="button-form" >Enviar Whatsapp</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <h3>COLLIM</h3>
+        <p>Copyright 2025 | Todos os Direitos Reservados</p>
+    </footer>
+
+    <script>
+        
+        function enviarwhats(event){
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById ('mensagem').value;
+            const telefone = '5512996757479'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgformatada = encodeURIComponent (texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgformatada}`
+
+            console.log (url)
+
+            window.open(url, '_blank')
+        }
+    </script>
+
+</body>
+</html>
